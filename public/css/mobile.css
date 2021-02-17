@@ -1,0 +1,356 @@
+/*
+             === TABLE OF CONTENT ===
+        
+         VARIETIES                   LINES
+    Large Screens Width ----------- 14 - 25
+    Tablets Width ----------------- 27 - 36
+    Small Tablets Width ----------- 38 - 74
+    Small Phones Width ------------ 76 - 119
+    Smart Phones Width ------------ 121 - 234
+    Smart Phones Height ----------- 236 - 357
+
+*/
+
+/* ---------------Large Screens Width--------- */
+@media (min-width: 2600px) {
+  html {
+    font-size: 1vw;
+  }
+
+  .container {
+    max-width: none;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+/* ---------------Tablets Width--------------- */
+@media (max-width: 1050px) {
+  #product {
+    padding-bottom: 0.01rem;
+  }
+
+  #testimonials .testimonials-sliders .slides {
+    height: 40vh;
+  }
+}
+
+/* ---------------Small Tablets Width--------------- */
+@media (max-width: 800px) {
+  /* ---------Services-------------- */
+  #services .services-content .different-content div h2 {
+    text-align: center;
+  }
+
+  #services .services-content .different-content div p {
+    text-align: center;
+  }
+
+  /* ----------Product Sliding Styling */
+  #product {
+    padding-bottom: 0.01rem;
+  }
+
+  #product .product-content > h2 {
+    padding-left: 0;
+  }
+
+  #product .product-page .product-slider {
+    width: 600px;
+    margin-top: 1rem;
+  }
+
+  #about .about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  #testimonials .testimonials-sliders .slides {
+    height: 40vh;
+  }
+}
+
+/* ---------------Small Phones Width---------------- */
+@media (max-width: 380px) {
+  .img-plate {
+    width: 230px;
+    height: 180px;
+  }
+
+  #main-nav .nav-bar ul li a {
+    padding: 0 0.37rem;
+    font-weight: bold;
+    margin: 0 0.37rem;
+  }
+
+  #main-header {
+    padding: 2rem;
+  }
+
+  #main-header .showcase-content h1 {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  #main-header .showcase-content p {
+    font-size: 1rem;
+    padding: 0 0.75rem;
+  }
+
+  #main-header .showcase-content a {
+    margin-left: 0.7rem;
+  }
+
+  /* -------Testimonials------- */
+  #testimonials .testimonials-sliders .slides {
+    height: 80vh;
+  }
+
+  #testimonials .testimonials-sliders .page {
+    padding: 1.5rem 1.5rem;
+  }
+
+  #testimonials .testimonials-sliders .page > img {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ---------------Smart Phones Width-------------- */
+@media (max-width: 540px) {
+  .img-plate {
+    box-shadow: 0.05rem 0.05rem 1rem rgba(15, 11, 11, 0.6);
+    width: 280px;
+    height: 200px;
+  }
+
+  .lead-dark {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  #main-nav .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+  }
+
+  #main-nav .nav-bar .logo {
+    margin-bottom: 1rem;
+  }
+
+  #main-header {
+    padding: 1rem;
+  }
+
+  #main-header .showcase-content h1 {
+    font-size: 3.2rem;
+  }
+
+  /* ---------Services----------- */
+  #services .services-content .different-content {
+    display: block;
+  }
+
+  /* -----------Product page-------- */
+  #product {
+    padding-bottom: 0.01rem;
+  }
+
+  /* ----------About page--------- */
+  #about .about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .about-page .about-info > h2 {
+    margin-left: 0.2rem;
+    padding-top: 3rem;
+  }
+
+  #about .about-page .about-info > p {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    margin: 0;
+    line-height: 2rem;
+    letter-spacing: 1.2px;
+  }
+
+  #about .about-page .about-info-2 {
+    margin: 0 0.12rem;
+    padding-top: 2rem;
+    line-height: 2rem;
+  }
+
+  #about .about-page .about-image {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* ----------Testimonials-------- */
+  #testimonials .medium-font {
+    margin-top: 0.5rem;
+  }
+
+  #testimonials .testimonials-sliders .slides {
+    height: 70vh;
+  }
+
+  #testimonials .testimonials-sliders .page {
+    padding: 4rem 2rem;
+  }
+
+  #testimonials .testimonials-sliders .page > img {
+    margin-bottom: 2rem;
+  }
+
+  /* ----------Contact--------- */
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact .contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #contact .contact-page .contact-info {
+    margin-top: 2rem;
+  }
+
+  /* ---------------Greetings-------------- */
+  #greetings h1 {
+    font-size: 2.5rem;
+    margin: 1.5rem;
+  }
+}
+
+/* ---------------Smart Phones Height--------------- */
+@media (max-height: 580px) {
+  #main-header .showcase-content h1 {
+    font-size: 2rem;
+  }
+
+  .img-plate {
+    box-shadow: 0.05rem 0.05rem 1rem rgba(15, 11, 11, 0.6);
+    width: 280px;
+    height: 200px;
+  }
+
+  .lead-dark {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  #main-nav .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+  }
+
+  #main-nav .nav-bar .logo {
+    margin-bottom: 1rem;
+  }
+
+  #main-header {
+    padding: 1rem;
+  }
+
+  #main-header .showcase-content h1 {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  #main-header .showcase-content p {
+    font-size: 1rem;
+    padding: 0 0.75rem;
+  }
+
+  #main-header .showcase-content a {
+    margin-left: 0.5rem;
+  }
+
+  /* ---------Services----------- */
+  #services .services-content .different-content {
+    display: block;
+  }
+
+  /* ----------About page--------- */
+  #about .about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .about-page .about-info > h2 {
+    margin-left: 0.2rem;
+    padding-top: 3rem;
+  }
+
+  #about .about-page .about-info > p {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    margin: 0;
+    line-height: 2rem;
+    letter-spacing: 1.2px;
+  }
+
+  #about .about-page .about-info-2 {
+    margin: 0 0.12rem;
+    padding-top: 2rem;
+    line-height: 2rem;
+  }
+
+  #about .about-page .about-image {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* ----------Testimonials-------- */
+  #testimonials {
+    padding: 3rem 0 2rem 0;
+  }
+
+  #testimonials .medium-font {
+    margin-top: 0.25rem;
+  }
+
+  #testimonials .testimonials-sliders .slides {
+    height: 70vh;
+  }
+
+  #testimonials .testimonials-sliders .page {
+    padding: 2rem 1rem;
+  }
+
+  #testimonials .testimonials-sliders .page > img {
+    margin-bottom: 1rem;
+  }
+
+  /* ----------Contact--------- */
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact .contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #contact .contact-page .contact-info {
+    margin-top: 2rem;
+  }
+}

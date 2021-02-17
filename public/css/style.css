@@ -1,0 +1,912 @@
+/*
+           ===  TABLE OF CONTENT  ===
+
+       VARIETIES                    LINES
+  External/Imported Files -------  23 - 24
+  Global Variables --------------  26 - 31
+  Browser Reset -----------------  33 - 49
+  Utilities ---------------------  51 - 246
+  Navigation -------------------- 248 - 280
+  Header ------------------------ 282 - 329
+  Services Section -------------- 331 - 386
+  Product Header Section -------- 388 - 408
+  Product Section --------------- 410 - 537
+  About Page -------------------- 539 - 639
+  Testimonials Section ---------- 641 - 753
+  Contact Page ------------------ 755 - 855
+  Form Submition Success Page --- 857 - 874
+  Greetings --------------------- 876 - 895
+  Footer ------------------------ 897 - 912
+
+*/
+
+/* -------External font from Google-font------ */
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Montserrat:wght@600&family=Nunito&display=swap");
+
+/* --------Global Variables------ */
+:root {
+  --light-color: #f4f4f4;
+  --dark-color: #333333;
+  --max-width: 1100px;
+}
+
+/* ---------Browser Reset--------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+/* -----------Utilities---------- */
+
+.lead-dark {
+  font-size: 1rem;
+  padding: 0.2rem 2rem;
+  color: var(--dark-color);
+  font-family: "Nunito", sans-serif;
+}
+
+.links {
+  font-size: 1rem;
+  color: rgba(15, 11, 11, 0.75);
+}
+
+.olugbenga_dev {
+  font-size: 1rem;
+  color: rgb(238, 132, 12);
+}
+
+.lead-light {
+  font-size: 1rem;
+  padding: 0.2rem 2rem;
+  color: rgb(252, 240, 216);
+  /* color: #fff; */
+  font-family: "Nunito", sans-serif;
+}
+
+.logo {
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+}
+
+.icon-color-dark {
+  color: var(--dark-color);
+}
+
+.icon-color-light {
+  color: var(--light-color);
+}
+
+.icon-color {
+  background: var(--light-color);
+  color: rgb(238, 132, 12);
+  margin: 1.5rem;
+}
+
+.img-plate {
+  width: 400px;
+  height: 250px;
+}
+
+.form-border {
+  font-family: "Nunito", sans-serif;
+  background: var(--light-color);
+  border: none;
+  border-bottom: 1.5px rgba(238, 132, 12, 0.4) solid;
+  border-radius: 0.95px;
+  font-family: "Nunito", sans-serif;
+}
+
+.heading-light {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: #333030;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading-dark {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: rgb(238, 132, 12);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.big-font {
+  font-size: 2rem;
+}
+
+.medium-font {
+  padding: 0.5rem;
+  font-size: 1.15rem;
+  font-family: "Calligraffitti", cursive;
+  text-align: center;
+}
+
+.small-font {
+  font-size: 0.8rem;
+}
+
+.letter-spacing {
+  letter-spacing: 10px;
+  color: rgb(247, 182, 86);
+  font-family: "Nunito", sans-serif;
+}
+
+.color-head {
+  color: rgb(238, 132, 12);
+}
+
+.color-light {
+  color: rgb(252, 240, 216);
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.py-4 {
+  padding: 4rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+.my-4 {
+  margin: 4rem 0;
+}
+
+.line-light {
+  background-color: rgb(226, 142, 17);
+  width: 16rem;
+  height: 1px;
+  align-self: center;
+  box-shadow: 2px 2px 20px 0.5px rgba(252, 211, 165, 0.6);
+}
+
+.picture-frame {
+  border: 2px rgb(238, 132, 12) solid;
+  padding: 0.5rem;
+  margin: 3rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  background-color: rgb(226, 142, 17);
+  width: 16rem;
+  height: 1px;
+  align-self: center;
+  box-shadow: 2px 2px 20px 0.5px rgba(15, 11, 11, 0.6);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  padding-bottom: 0.2rem;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.btn {
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  border: none;
+  color: #f4f4f4;
+  background-color: rgb(194, 121, 12);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #f4f4f4;
+  /* padding-bottom: 0.5rem; */
+  background-color: rgb(161, 100, 7);
+  transition: 300ms ease-in;
+}
+
+/* ------------Navigation---------- */
+#main-nav {
+  position: sticky;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 1rem;
+  top: 0;
+  z-index: 10;
+}
+
+#main-nav .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+#main-nav a {
+  padding: 0.1rem 0.25rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+#main-nav a:hover,
+#main-nav a:focus {
+  color: rgb(226, 142, 17);
+  border-bottom: 2px whitesmoke solid;
+  transition: 200ms ease-in;
+}
+
+/* ---------------Header---------- */
+#main-header {
+  color: #fff;
+  background: #333;
+  padding: 2rem;
+  position: relative;
+}
+
+#main-header::before {
+  content: "";
+  background: url("../img/main_page.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+#main-header .showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-header .showcase-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 60vh;
+  width: 100vw;
+}
+
+#main-header .showcase-content {
+  z-index: 1;
+}
+
+#main-header .showcase-content h1 {
+  font-size: 5rem;
+  padding-right: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#main-header .showcase-content p {
+  font-size: 1.25rem;
+  padding-right: 0.5rem;
+  font-family: "Nunito", sans-serif;
+}
+
+/* -----------Services Section---------- */
+#services {
+  background-color: #f4f4f4;
+  display: flex;
+  scroll-snap-align: center;
+}
+
+#services .services-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+#services .services-content .medium-font {
+  margin: 0.5rem 0;
+}
+
+#services .services-content .different-content {
+  display: flex;
+}
+
+#services .service-intro {
+  opacity: 0;
+  transform: translateY(1.2rem);
+  transition: 0.5s all ease-in-out;
+}
+
+#services .service-intro-appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#services .services-content .different-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#services .services-content .different-content div h2 {
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+#services .services-content .different-content div p {
+  text-align: center;
+}
+
+#services .services-content .different-content div h2,
+#services .services-content .different-content div p {
+  margin: 0 4rem;
+  color: #333030;
+}
+
+/* ---------Product Header Section------ */
+#product-head {
+  background-color: var(--light-color);
+  display: flex;
+}
+
+#product-head div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#product-head .container > h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+#product-head .medium-font {
+  margin: 0.5rem 0;
+}
+
+/* ----------------Product Section--------------- */
+#product {
+  background-color: var(--light-color);
+  padding-bottom: 5rem;
+}
+
+#product .product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product .slider {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+}
+
+#product .product-slide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#product .product-slide.current {
+  opacity: 1;
+}
+
+#product .product-slide .product-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+#product .product-content > h2 {
+  padding-left: 2rem;
+}
+
+#product .content-1 {
+  bottom: 10%;
+  left: 0;
+  color: var(--light-color);
+  padding: 0.5rem;
+}
+
+#product .text-1 {
+  font-size: 1.25rem;
+  color: var(--light-color);
+  text-align: justify;
+}
+
+#product .content-2 {
+  top: 10%;
+  color: var(--light-color);
+  padding: 0.5rem;
+}
+
+#product .text-2 {
+  font-size: 1.25rem;
+  color: var(--light-color);
+  text-align: justify;
+}
+
+#product .content-3 {
+  color: var(--dark-color);
+  padding: 0.5rem;
+}
+
+#product .text-3 {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+#product .product-slide.current .product-content {
+  opacity: 1;
+  transition: all 0.9s ease-in-out 0.4s;
+}
+
+#product .product-slide:first-child {
+  background: url(../img/interior_2.jpg) no-repeat center center/cover;
+}
+
+#product .product-slide:nth-child(2) {
+  background: url(../img/interior_1.jpg) no-repeat center top/cover;
+}
+
+#product .product-slide:nth-child(3) {
+  background: url(../img/interior_3.jpg) no-repeat center top/cover;
+}
+
+#product .slider-buttons button#prev {
+  display: block;
+  float: left;
+  left: 1rem;
+}
+
+#product .slider-buttons button#next {
+  display: block;
+  float: right;
+  right: 1rem;
+}
+
+#product .slider-buttons button {
+  position: absolute;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 50%;
+  color: rgb(226, 142, 17);
+  padding: 13px 15px;
+  outline: none;
+  background-color: transparent;
+}
+
+#product .slider-buttons button:hover {
+  box-shadow: 0.05rem 0.05rem 0.7rem rgba(80, 63, 63, 0.4);
+  background-color: rgb(226, 142, 17);
+  color: rgba(15, 11, 11, 0.75);
+  border: none;
+}
+
+/* -----------About Page-------- */
+
+#about {
+  background: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+  scroll-snap-align: center;
+}
+
+#about::before {
+  content: "";
+  background: url("/img/paint_injection.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+#about .container {
+  z-index: 6;
+}
+
+#about .container > h1 {
+  padding-bottom: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#about .about-page {
+  display: grid;
+  grid-gap: 0.47rem;
+  grid-template-columns: 2fr 1fr;
+  z-index: 2;
+}
+
+#about .info-intro {
+  opacity: 0;
+  transform: translateY(1.2rem);
+  transition: 0.5s all ease-in-out;
+}
+
+#about .info-intro-appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about .about-page .about-info > h2 {
+  text-align: left;
+  padding: 0 2rem;
+  margin: 0 0 0 5rem;
+  padding-top: 3rem;
+  color: rgb(252, 240, 216);
+}
+
+#about .about-page .about-info > p {
+  text-align: left;
+  font-size: 1rem;
+  margin-left: 5rem;
+  line-height: 2rem;
+  letter-spacing: 1.2px;
+}
+
+#about .about-page .about-info-2 {
+  grid-column: 1 / span 2;
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 1.4px;
+  line-height: 2rem;
+  margin: 0 5rem;
+}
+
+#about .info-2-intro {
+  opacity: 0;
+  transform: translateY(1.2rem);
+  transition: 0.5s all ease-in-out;
+}
+
+#about .info-2-intro-appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about .about-page .about-image {
+  width: 250px;
+  height: 180px;
+  background: url(../img/mr_festus.jpg) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+#about .about-page .about-image > div {
+  background-color: rgba(46, 44, 30, 0.8);
+  width: 100%;
+  text-align: center;
+}
+
+/* ----------Testimonials Section---------- */
+#testimonials {
+  background: rgb(226, 142, 17);
+  display: flex;
+  padding: 5rem 0 2rem 0;
+  position: relative;
+  color: var(--dark-color);
+}
+
+#testimonials::before {
+  content: "";
+  background: url(../img/testimonials.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+
+#testimonials .container {
+  z-index: 6;
+}
+
+#testimonials .container > h1 {
+  margin-bottom: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-color);
+}
+
+#testimonials .medium-font {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+#testimonials .testimonials-sliders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonials .testimonials-sliders .slides {
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+}
+
+#testimonials .testimonials-sliders .page {
+  position: absolute;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin: 0.5rem 0.5rem;
+  padding: 4rem 2rem;
+}
+
+#testimonials .testimonials-sliders .page.present {
+  opacity: 1;
+}
+
+#testimonials .testimonials-sliders .page .slide-content {
+  opacity: 0;
+}
+
+#testimonials .testimonials-sliders .page.present .slide-content {
+  opacity: 1;
+  transition: all 0.9s ease-in-out 0.4s;
+}
+
+#testimonials .testimonials-sliders .page > img {
+  width: 150px;
+  height: 100px;
+  border: 1px rgb(238, 132, 12) solid;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+#testimonials .slide-buttons button#prevTwo {
+  display: block;
+  float: left;
+  left: 1rem;
+}
+
+#testimonials .slide-buttons button#nextTwo {
+  display: block;
+  float: right;
+  right: 1rem;
+}
+
+#testimonials .slide-buttons button {
+  position: absolute;
+  font-size: 1.25rem;
+  color: rgba(15, 11, 11, 0.75);
+  padding: 13px 15px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+#testimonials .slide-buttons button:hover {
+  color: rgb(226, 142, 17);
+  text-shadow: 0.05rem 0.05rem 0.7rem rgba(80, 63, 63, 0.4);
+}
+
+/* ---------------Contact Page-----------*/
+#contact {
+  background: var(--light-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+#contact .contact-page {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#contact .contact-page .contact-form {
+  flex: 1;
+  background: var(--light-color);
+  box-shadow: 0.05rem 0.05rem 0.7rem rgba(80, 63, 63, 0.4);
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 2rem;
+  z-index: 4;
+}
+
+#contact .contact-page .contact-form label {
+  color: rgba(15, 11, 11, 0.75);
+  display: block;
+  font-size: 1rem;
+}
+
+#contact .contact-page .contact-form h1 {
+  color: rgb(226, 142, 17);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .contact-page .contact-info h1 {
+  color: rgb(226, 142, 17);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .contact-page .contact-form input,
+#contact .contact-page .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: inherit;
+  font-family: "Nunito", sans-serif;
+}
+
+#contact .contact-page .contact-form .name-error,
+#contact .contact-page .contact-form .subject-error,
+#contact .contact-page .contact-form .email-error,
+#contact .contact-page .contact-form .message-error {
+  margin-top: -0.9rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255, 72, 0);
+  text-shadow: 0.05rem 0.05rem 0.7rem rgba(80, 63, 63, 0.4);
+}
+
+#contact .contact-page .contact-form textarea {
+  height: 150px;
+  font-size: inherit;
+  font-family: "Nunito", sans-serif;
+}
+
+#contact .contact-page .contact-form input:focus,
+#contact .contact-page .contact-form textarea:focus {
+  outline: none;
+  border-bottom: 3px rgb(226, 142, 17) solid;
+}
+
+#contact .contact-page .contact-info {
+  flex: 1;
+  background: var(--light-color);
+  box-shadow: 0.05rem 0.05rem 0.7rem rgba(80, 63, 63, 0.4);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#contact .contact-page .contact-info p {
+  font-size: 1rem;
+  color: rgba(15, 11, 11, 0.75);
+  padding-left: 1rem;
+  line-height: 2rem;
+}
+
+#contact .contact-page .contact-info h3 {
+  color: rgb(226, 142, 17);
+  font-size: 1.35rem;
+  margin: 1rem 0 0 1rem;
+}
+
+#contact div > h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: rgb(226, 142, 17);
+}
+
+/* ----------Form Submition Success Page------ */
+#form-submitted {
+  background-color: rgba(15, 11, 11, 0.75);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light-color);
+}
+
+#form-submitted a {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+/* --------------Greetings---------- */
+#greetings {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#greetings h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--light-color);
+  margin: 1rem;
+}
+
+#greetings span {
+  font-size: 4.5rem;
+  font-family: "Calligraffitti", cursive;
+  color: rgb(226, 142, 17);
+}
+
+/* ---------------Footer---------------- */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+#footer .footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+}
